@@ -1,12 +1,12 @@
-#N canvas 73 123 1662 962 12;
+#N canvas 66 53 1662 962 12;
 #X obj 69 188 metro-obj;
 #X obj 276 189 random-obj;
 #X obj 172 189 counter-obj;
 #X floatatom 148 131 5 0 512 0 - - - 0;
 #X floatatom 353 128 5 0 0 0 - - - 0;
 #X obj 356 553 freq-obj;
-#X obj 353 832 multisound-obj;
-#X obj 669 843 hsl 162 19 0 1 0 0 empty empty ampiezza -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 351 837 multisound-obj;
+#X obj 671 837 hsl 162 19 0 1 0 0 empty empty ampiezza -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 71 557 freq-obj;
 #X obj 357 286 freq-obj;
 #X obj 670 282 freq-obj;

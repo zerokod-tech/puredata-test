@@ -1,0 +1,9 @@
+#N canvas 222 287 1286 747 12;
+#X obj 123 58 osc~ 440;
+#X obj 157 85 double-filter-fx;
+#X obj 146 603 dac~;
+#X floatatom 123 28 5 0 0 0 - - - 0;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 0 0;

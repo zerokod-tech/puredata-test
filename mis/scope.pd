@@ -1,0 +1,49 @@
+#N canvas 374 155 1088 782 12;
+#N canvas 0 96 450 250 (subpatch) 0;
+#X array \$0-scope 500 float 0;
+#X coords 0 1 499 -1 200 140 1 0 0;
+#X restore 404 87 graph;
+#X obj 669 355 metro 200;
+#X obj 589 69 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 597 356 inlet~;
+#X obj 82 379 sel 0;
+#X obj 598 434 tabwrite~ \$0-scope;
+#X obj 82 418 pack \$0;
+#X msg 82 461 \; \$1-scope const 0;
+#X text 133 378 Quando riceve uno zero \, [sel] invia un bang;
+#X text 598 470 Ogni 200 millisecondi metro invia un bang a tabwrite
+\, il quale ad ogni bang invia i campioni audio \, ricevuti in ingresso
+\, all'array;
+#X text 623 58 Tutto quello che sta nel rettangolo rosso sarà visibile
+nella patch "parent" \, ossia quella che utilizza questa abstraction
+;
+#X text 332 5 Vedi la patch test-scope.pd per un esempio di utilizzo
+;
+#X text 622 109 Ricorda: inserire \$0 nel nome dell'array è fondamentale
+per far sì che ogni istanza di [scope] abbia un array indipendente
+dalle altre istanze. Questo perchè il nome di un array è visibile
+a TUTTE le patch aperte \, ma la presenza di \$0 fa si che ogni istanza
+di scope usi un nome diverso per l'array (es: 1203-scope \, 1204-scope)
+\, eliminando così l'ambiguità.;
+#X text 142 412 [pack] qui contiene il valore effettivo di \$0 \, e
+lo invia fuori ogni volta che riceve un bang;
+#X text 80 500 Questo messaggio dice a \$0-scope di impostare tutti
+i gli indici al valore 0 Nota come l'oggetto messaggio non abbia alcuna
+idea di cosa sia l'argomento \$0 \, quindi il valore di \$0 deve essere
+inviato dall'esterno tramite collegamento diretto. L'oggetto messaggio
+potrà accedere a questo valore utilizzando il proprio sistema INTERNO
+di argomenti \, nel quale il primo argomento inviato attraverso il
+"cavo" è \$1. In questo caso \$1 (argomento del messaggio) conterrà
+il valore di \$0 (argomento della patch);
+#X obj 511 270 t f f;
+#X text 559 262 [trigger] assicura che il messaggio di reset dell'array
+arrivi DOPO che metro è stato disattivato.;
+#X connect 1 0 5 0;
+#X connect 2 0 15 0;
+#X connect 3 0 5 0;
+#X connect 4 0 6 0;
+#X connect 6 0 7 0;
+#X connect 15 0 4 0;
+#X connect 15 1 1 0;
+#X coords 0 -1 1 1 208 180 1 400 50;
