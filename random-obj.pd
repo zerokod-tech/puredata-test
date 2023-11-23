@@ -2,7 +2,7 @@
 #X obj 127 30 inlet;
 #X obj 127 63 random \$1;
 #X obj 186 30 inlet;
-#X floatatom 128 121 5 0 0 0 - - - 0;
+#X floatatom 127 122 5 0 0 0 - - - 0;
 #X obj 129 180 outlet;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;

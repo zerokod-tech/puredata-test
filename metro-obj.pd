@@ -2,9 +2,9 @@
 #X obj 12 29 inlet;
 #X obj 36 181 outlet;
 #X obj 62 29 inlet;
-#X floatatom 118 115 5 0 1000 0 - - - 0;
+#X floatatom 123 123 5 0 1000 0 - - - 0;
 #X obj 36 101 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 35 71 metro;
+#X obj 35 71 metro 1 \$1 permin;
 #X connect 0 0 5 0;
 #X connect 2 0 3 0;
 #X connect 3 0 5 1;

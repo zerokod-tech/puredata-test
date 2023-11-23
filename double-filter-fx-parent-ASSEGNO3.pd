@@ -1,4 +1,4 @@
-#N canvas 222 287 1286 747 12;
+#N canvas 220 223 1286 747 12;
 #X obj 123 58 osc~ 440;
 #X obj 157 85 double-filter-fx;
 #X obj 146 603 dac~;

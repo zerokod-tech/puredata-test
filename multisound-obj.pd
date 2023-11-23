@@ -5,8 +5,8 @@
 #X floatatom 352 136 5 0 0 0 - - - 0;
 #X obj 44 183 *~ \$1;
 #X obj 43 117 *~;
-#X obj 119 137 hsl 162 19 0 1 0 0 empty empty evitare\ distorsioni -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
-#X floatatom 300 136 5 0 0 0 - - - 0;
+#X obj 172 136 hsl 162 19 0 1 0 0 empty empty <0.125\ distorsioni -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X floatatom 120 136 5 0 0 0 - - - 0;
 #X text 334 116 ampiezza;
 #X connect 1 0 5 0;
 #X connect 2 0 3 0;
